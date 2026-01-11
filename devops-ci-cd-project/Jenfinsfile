@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = "yourdockerhubusername/devops-app"
+        IMAGE_NAME = "amanuxsource/devops-app"
         IMAGE_TAG  = "1.0"
     }
 
@@ -15,7 +15,7 @@ pipeline {
         stage('Clone Code') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/yourusername/devops-ci-cd-project.git'
+                url: 'https://github.com/Aman-ux-source/devops-ci-cd-project.git'
             }
         }
 
@@ -42,7 +42,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'dockerhub-creds',
+                    credentialsId: 'dockerhub',
                     usernameVariable: 'DOCKER_USER',
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
