@@ -14,7 +14,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git branch: 'main',
+                git branch: 'master',
                 url: 'https://github.com/Aman-ux-source/devops-ci-cd-project.git'
             }
         }
