@@ -19,6 +19,9 @@
 
     <build>
         <plugins>
+                 <groupId>org.sonarsource.scanner.maven</groupId>
+                  <artifactId>sonar-maven-plugin</artifactId>
+                 <version>3.11.0.2311</version>
 
             <!-- Create executable jar -->
             <plugin>
